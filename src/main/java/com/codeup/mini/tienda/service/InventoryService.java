@@ -53,14 +53,14 @@ public class InventoryService {
     public String listInventory() {
         if (products.isEmpty()) return "There are no products in inventory, add a product and it will be displayed here";
 
-        StringBuilder sb = new StringBuilder("📦 CURRENT INVENTORY:\n\n");
+        StringBuilder sb = new StringBuilder("CURRENT INVENTORY:\n\n");
         for (int i = 0; i < products.size(); i++) {
             String name = products.get(i);
             sb.append((i + 1)).append(". ")
               .append(name)
-              .append(" - $").append(prices[i])
+              .append(" - Price: $").append(prices[i])
               .append(" - Quantity: ").append(quantity.get(name))
-              .append("\n");
+              .append(" units\n");
         }
         return sb.toString(); 
     }
@@ -102,7 +102,7 @@ public class InventoryService {
             }
         }
 
-        return "📊 RANKING:\n\nCheaper: " + minProd + " ($" + min + ")\nMore expensive: " + maxProd + " ($" + max + ")";
+        return "RANKING:\n\nCheaper: " + minProd + " ($" + min + ")\nMore expensive: " + maxProd + " ($" + max + ")";
     }
 
     // 🔹 search product for name
@@ -116,7 +116,7 @@ public class InventoryService {
                 sb.append(products.get(i))
                   .append(" - $").append(prices[i])
                   .append(" - Quantity: ").append(quantity.get(products.get(i)))
-                  .append("Units\n");
+                  .append(" Units\n");
             }
         }
 
