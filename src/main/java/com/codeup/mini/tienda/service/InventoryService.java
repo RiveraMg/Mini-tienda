@@ -18,7 +18,7 @@ public class InventoryService {
     private HashMap<String, Integer> quantity = new HashMap<>(); //Create a HashMap to stock for product
     private double totalSales = 0;
 
-    // 🔹 method to expand array of price
+    // method to expand array of price
     private double[] expandPrices(double[] oldPrices, double newPrice) {
         double[] newPrices = new double[oldPrices.length + 1];
         System.arraycopy(oldPrices, 0, newPrices, 0, oldPrices.length);
@@ -26,7 +26,7 @@ public class InventoryService {
         return newPrices;
     }
 
-    // 🔹 Returns the index of a product by name
+    // method to returns the index of a product by name
     private int indexOfName(String name) {
         for (int i = 0; i < products.size(); i++) {
             if (products.get(i).equalsIgnoreCase(name)) {
@@ -36,7 +36,7 @@ public class InventoryService {
         return -1;
     }
 
-    // 🔹 Add product
+    // method add product
     public String addProduct(String name, double price, int qty) {
         if (name == null || name.trim().isEmpty()) return "Name product invalid, please enter name product valid";
         if (products.contains(name)) return "The product you are trying to enter already exists.";
@@ -49,7 +49,7 @@ public class InventoryService {
         return "Product successfully added";
     }
 
-    // 🔹 List inventary
+    // method to list inventary
     public String listInventory() {
         if (products.isEmpty()) return "There are no products in inventory, add a product and it will be displayed here";
 
@@ -65,7 +65,7 @@ public class InventoryService {
         return sb.toString(); 
     }
 
-    // 🔹 Comprar producto
+    // metod that buy a product
     public String buyProduct(String name, int qty) {
         int index = indexOfName(name);
         if (index == -1) return "The product you are trying to purchase does not exist.";
@@ -84,7 +84,7 @@ public class InventoryService {
         return "Your purchase was successful. With a total of: $" + total;
     }
 
-    // 🔹 Show ranking
+    // show ranking tha product chepper and more expensive
     public String showStatistics() {
         if (products.isEmpty()) return "There is no visible ranking because there are no registered products";
 
@@ -105,12 +105,12 @@ public class InventoryService {
         return "RANKING:\n\nCheaper: " + minProd + " ($" + min + ")\nMore expensive: " + maxProd + " ($" + max + ")";
     }
 
-    // 🔹 search product for name
+    // search product for name
     public String searchProduct(String term) {
         if (products.isEmpty()) return "There are no registered producers to search for";
         if (term == null || term.trim().isEmpty()) return "The search is empty";
 
-        StringBuilder sb = new StringBuilder("🔍 Search results:\n\n");
+        StringBuilder sb = new StringBuilder("Search results:\n\n");
         for (int i = 0; i < products.size(); i++) {
             if (products.get(i).toLowerCase().contains(term.toLowerCase())) {
                 sb.append(products.get(i))
@@ -123,9 +123,9 @@ public class InventoryService {
         return sb.length() > 30 ? sb.toString() : "No matches found for that search.";
     }
 
-    // 🔹 Mostrar ticket final
+    // show ticket final
     public String showTicket() {
-        return "🧾 Total purchases made: $" + totalSales;
+        return "Total purchases made: $" + totalSales;
     }
 }
 
