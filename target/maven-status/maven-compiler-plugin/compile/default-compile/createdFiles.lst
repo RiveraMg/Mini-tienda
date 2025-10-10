@@ -1,0 +1,6 @@
+com\codeup\mini\tiendahu2\domain\Food.class
+com\codeup\mini\tiendahu2\domain\Appliances.class
+com\codeup\mini\tiendahu2\domain\Product.class
+com\codeup\mini\tiendahu2\ui\Menu.class
+com\codeup\mini\tiendahu2\MiniTiendaHU2.class
+com\codeup\mini\tiendahu2\service\StoreService.class
