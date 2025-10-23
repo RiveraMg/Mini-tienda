@@ -1,0 +1,9 @@
+com/mycompany/mini/store/connection/ConnectionFactory.class
+com/mycompany/mini/store/service/IProductService.class
+com/mycompany/mini/store/ui/MiniStoreUI.class
+com/mycompany/mini/store/DAO/impl/ProductRepositoryImpl.class
+com/mycompany/mini/store/config/Config.class
+com/mycompany/mini/store/domain/Product.class
+com/mycompany/mini/store/MiniStore.class
+com/mycompany/mini/store/service/impl/ProductServiceImpl.class
+com/mycompany/mini/store/DAO/IRepository.class
