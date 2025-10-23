@@ -134,11 +134,17 @@ db.password=yourpassword
 
 The UI Layer (MiniStoreUI) shows a menu using JOptionPane:
 -Add product
+
 -List inventory
+
 -Update price
+
 -Update stock
+
 -Delete product
+
 -Search product by name
+
 -Exit and show summary
 
 The Service Layer validates input and delegates operations to the DAO.
@@ -148,10 +154,15 @@ Custom exceptions are thrown and handled gracefully with meaningful messages.
 ## 🧠 Key Features
 
 ✅ Layered architecture (UI, Service, DAO, Domain)
+
 ✅ Custom exception handling
+
 ✅ JDBC with PreparedStatement and try-with-resources
+
 ✅ Input validation and duplication checks
+
 ✅ Friendly error messages via JOptionPane
+
 ✅ Summary of successful operations at program exit
 
 ## 👨‍💻 Author
