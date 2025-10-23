@@ -28,6 +28,7 @@ The system also provides a session summary when the user exits the application.
 
 ## 🧩 Project Structure
 ```
+
 Mini-Store/
 ├── src/
 │   └── main/
@@ -42,6 +43,7 @@ Mini-Store/
 │           └── db.properties
 ├── pom.xml
 └── README.md
+
 ```
 
 
